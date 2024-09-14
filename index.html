@@ -1,16 +1,19 @@
 <DOCTYPE html>
-<html>
-	<head></head>
-	<body>
-		<h1>Brown fox jump over mountains</h1>
-	</body>
-	<script>
-let ws;
-		const protocol = window.location.protocol === "https:" ? "wss" : "ws";
-		ws = new WebSocket(`${protocol}://tictactoe.lat`);
-		ws.onmessage = (event) => {
-					console.log("event", event.data);
+  <html>
 
-				}
-	</script>
-</html>
+  <head></head>
+
+  <body>
+    <h1>Brown fox jump over mountains</h1>
+  </body>
+  <script>
+    let ws;
+    const protocol = window.location.protocol === "https:" ? "wss" : "ws";
+    ws = new WebSocket(`${protocol}://${window.location.host}`);
+    ws.onmessage = (event) => {
+      console.log("data", event.data);
+    };
+  </script>
+
+  </html>
+</DOCTYPE>
