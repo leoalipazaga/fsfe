@@ -66,4 +66,5 @@ process.on("SIGINT", () => {
   server.close(() => {
     shutdownDB();
   });
+  process.exit();
 });
